@@ -1,12 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Zhexuan Yang</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Zhexuan Yang</title>
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
-    <h1>Dr. Zhexuan Yang</h1>
-    <p>Assistant Teaching Professor</p>
-    <p>Department of Statistics</p>
-    <p>Penn State University</p>
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Zhexuan Yang</a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="software.html">Software</a>
+        <a href="cv.html">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="avatar">
+          <!-- Optional: upload a photo as assets/headshot.jpg -->
+          <!-- If you don't have one yet, this box will just look clean. -->
+          <img src="assets/headshot.jpg" alt="Headshot" onerror="this.style.display='none'"/>
+        </div>
+
+        <div>
+          <h1 class="h-title">Dr. Zhexuan (Zy) Yang</h1>
+          <p class="h-sub">
+            Assistant Teaching Professor, Department of Statistics<br/>
+            The Pennsylvania State University
+          </p>
+
+          <div class="pills">
+            <span class="pill">Bayesian statistics</span>
+            <span class="pill">Functional data analysis</span>
+            <span class="pill">Mixture models</span>
+            <span class="pill">Statistical computing (R)</span>
+          </div>
+
+          <div class="btnrow">
+            <a class="btn primary" href="cv.html">View CV</a>
+            <a class="btn" href="software.html">R Packages</a>
+            <a class="btn" href="teaching.html">Courses</a>
+          </div>
+
+          <p class="kicker">
+            Contact: <a href="mailto:YOUR_EMAIL@psu.edu">YOUR_EMAIL@psu.edu</a>
+            &nbsp;•&nbsp;
+            GitHub: <a href="https://github.com/zyang1919">zyang1919</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I am an Assistant Teaching Professor in the Department of Statistics at Penn State.
+          My interests include Bayesian Functional Data Analysis (BFDA), survival modeling, outcome-dependent follow-up,
+          and statistical computing in R. I develop research software and create course materials for probability
+          and stochastic modeling.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Highlights</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Research</h3>
+          <p>Bayesian functional data analysis, mixture survival models, discrete-time follow-up processes.</p>
+          <ul class="list">
+            <li><a href="research.html">Research overview & selected works</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Teaching</h3>
+          <p>Probability, Markov chains, Poisson processes, stochastic modeling.</p>
+          <ul class="list">
+            <li><a href="teaching.html">STAT/MATH 414 and STAT/MATH 416</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Software</h3>
+          <p>R packages for Bayesian methods and multistage MCMC workflows.</p>
+          <ul class="list">
+            <li><a href="software.html">mmcmcBayes, alpmixBayes, and more</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Students & Collaboration</h3>
+          <p>I enjoy mentoring and building practical, reproducible statistical tools.</p>
+          <ul class="list">
+            <li>Open to collaboration on Bayesian modeling & computing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container">
+        © <span id="year"></span> Zhexuan Yang • Built with GitHub Pages
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
