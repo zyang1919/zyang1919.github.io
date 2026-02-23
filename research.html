@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research | Zhexuan Yang</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Zhexuan Yang</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="software.html">Software</a>
+        <a href="cv.html">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>Research</h2>
+      <div class="card">
+        <p>
+          My work focuses on Bayesian modeling for functional and longitudinal data, with applications to survival analysis,
+          outcome-dependent follow-up, and high-dimensional biomedical settings.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Topics</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bayesian Functional Data Analysis (BFDA)</h3>
+          <p>Multivariate smoothing splines, MMCMC, and inference for functional outcomes.</p>
+        </div>
+        <div class="card">
+          <h3>Mixture Models in Survival Analysis</h3>
+          <p>α-mixture survival models and related Bayesian hierarchies.</p>
+        </div>
+        <div class="card">
+          <h3>Outcome-Dependent Follow-Up</h3>
+          <p>Discrete-time follow-up processes and bias-aware inference.</p>
+        </div>
+        <div class="card">
+          <h3>Statistical Computing</h3>
+          <p>Reproducible workflows and research software in R.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Selected items (placeholders)</h2>
+      <div class="card">
+        <ul class="list">
+          <li><b>Dissertation:</b> Applications of Bayesian Functional Data Analysis (BFDA).</li>
+          <li><b>Software:</b> See <a href="software.html">Software</a> for packages and documentation.</li>
+          <li><b>Manuscripts:</b> Add arXiv / journal links here when ready.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Zhexuan Yang</div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
