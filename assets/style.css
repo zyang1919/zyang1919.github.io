@@ -51,6 +51,7 @@ a:hover{ text-decoration:underline; }
   gap:14px;
   flex-wrap:wrap;
   justify-content:flex-end;
+  margin-left:auto;
 }
 .nav-links a{
   padding:6px 10px;
