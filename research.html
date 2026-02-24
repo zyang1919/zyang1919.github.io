@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
-
   <div class="nav">
     <div class="container nav-inner">
       <div class="nav-links">
@@ -22,120 +21,109 @@
 
   <div class="container">
 
-    <!-- Research Section -->
+    <!-- Research Interests -->
     <section class="section">
-
-      <!-- General Introduction -->
-      <p class="research-intro">
-        My research focuses on developing Bayesian and likelihood-based statistical
-        methodologies for complex biomedical data. I am particularly interested in
-        modeling structural dependence, population heterogeneity, and informative
-        observation mechanisms in longitudinal, survival, and high-dimensional
-        genomic studies. My work integrates theoretical development, computational
-        implementation in R, and applied collaboration in biostatistics and
-        bioinformatics.
-      </p>
-
       <h2>Current Research</h2>
-
       <div class="grid">
 
-        <!-- DNA Methylation -->
         <div class="card">
           <h3>Differential Methylation Regions Detection</h3>
           <p>
-            DNA methylation plays an important role in regulating gene expression
-            without changing the DNA sequence itself. Abnormal methylation patterns
-            are frequently associated with cancer and other complex diseases.
-            Detecting these abnormal patterns at the regional level is a central
-            problem in modern bioinformatics.
+            DNA methylation plays an important role in regulating gene expression 
+            without changing the DNA sequence itself. When methylation patterns go 
+            wrong, they are often linked to cancer and other complex diseases. 
+            Detecting these abnormal patterns, especially at the regional level, is 
+            a central problem in modern bioinformatics.
           </p>
           <p>
-            In practice, methylation data are high-dimensional and noisy.
-            Nearby CpG sites are spatially correlated, subjects exhibit
-            biological heterogeneity, and signals are often weak. Standard
-            site-by-site testing procedures tend to ignore regional structure,
-            which reduces statistical power and complicates biological interpretation.
+            In practice, methylation data are high-dimensional and noisy. Nearby 
+            CpG sites are correlated, subjects can vary substantially, and signals 
+            are often weak. Standard site-by-site testing methods tend to ignore 
+            this regional structure, which can reduce statistical power and make 
+            biological interpretation harder.
           </p>
           <p>
-            To address these challenges, I developed a Bayesian multistage
-            Markov chain Monte Carlo (MMCMC) framework that adaptively
-            partitions genomic regions and evaluates regional differences
-            using Bayes factors. The methodology improves detection accuracy
-            while preserving biological interpretability and is implemented
-            in the R package <i>mmcmcBayes</i>.
+          To address these challenges, I developed a Bayesian multistage Markov chain 
+          Monte Carlo framework that adaptively partitions genomic regions 
+          and evaluates regional differences using Bayes factors. This approach improves 
+          detection accuracy while preserving biological interpretability. The methodology 
+          is implemented in the R package <i>mmcmcBayes</i>.
           </p>
         </div>
 
-        <!-- ODF -->
         <div class="card">
           <h3>Outcome-Dependent Follow-Up in Longitudinal Studies</h3>
           <p>
-            In many longitudinal and electronic health record (EHR) studies,
-            patient monitoring is not conducted at fixed intervals. Instead,
-            follow-up intensity often depends on a patient’s recent health
-            status or observed outcomes. This outcome-dependent follow-up
-            mechanism introduces informative observation times.
-          </p>
-          <p>
-            Ignoring this dependence between the outcome process and the
-            monitoring mechanism can lead to biased estimation and distorted
-            inference, particularly when patients with worsening conditions
-            are monitored more frequently.
-          </p>
-          <p>
-            I develop discrete-time hazard modeling frameworks that jointly
-            characterize outcome trajectories and monitoring processes.
-            The approach incorporates transition-based structures and
-            machine learning methods to estimate patient risk levels that
-            influence monitoring intensity, providing bias-corrected and
-            interpretable inference for applied clinical research.
-          </p>
-        </div>
+            In many longitudinal and electronic health record (EHR) studies, 
+            patient monitoring is not conducted at fixed intervals. Instead, 
+            follow-up intensity often depends on a patient’s recent health status 
+            or observed outcomes. This outcome-dependent follow-up (ODFL) mechanism 
+            introduces informative observation times that violate the standard 
+            assumption of independent monitoring schedules.
+        </p>
+        <p>
+          Ignoring the dependence between the outcome process and the monitoring 
+          mechanism can lead to biased estimation and distorted inference. 
+          In particular, when patients with worsening conditions are observed 
+          more frequently, naive longitudinal models may overestimate disease 
+          progression or mischaracterize treatment effects.
+        </p>
+        <p>
+          To address this issue, I develop discrete-time hazard modeling frameworks 
+          that jointly characterize the outcome trajectory and the follow-up process. 
+          The monitoring mechanism is modeled using discrete-time transition structures, 
+          allowing the follow-up intensity to depend on previous outcomes. In addition, 
+          I incorporate machine learning methods to estimate patient risk levels that 
+          influence monitoring intensity. The goal is to reduce bias while keeping the models 
+          interpretable for applied clinical research.
+        </p>
+      </div>
 
-        <!-- Alpha Mixture -->
         <div class="card">
-          <h3>α-Mixture Models in Survival Analysis</h3>
+          <h3>Mixture Models in Survival Analysis</h3>
           <p>
-            Survival data often exhibit heterogeneity due to latent
-            subpopulations and unobserved risk factors. Classical survival
-            models assume homogeneous populations and may fail to capture
-            complex hazard interactions.
+            Survival data arising from biomedical and clinical studies often exhibit 
+            heterogeneity due to unobserved subpopulations, varying risk profiles, 
+            or latent biological mechanisms. Classical survival models, such as the 
+            Cox proportional hazards model or parametric lifetime models, typically 
+            assume a homogeneous population structure and may fail to capture complex 
+            risk dynamics.
           </p>
           <p>
-            Finite mixture models offer flexibility by representing survival
-            distributions as weighted combinations of component distributions,
-            but traditional formulations may lack interpretability.
+            Finite mixture models provide a flexible framework for accommodating 
+            population heterogeneity by representing the survival distribution as a 
+            weighted combination of component distributions. However, traditional 
+            mixture formulations may lack interpretability and may not adequately 
+            model intermediate dependence structures between competing components.
           </p>
           <p>
-            I develop Bayesian α-mixture survival models that introduce a
-            parameter controlling dependence between component hazards.
-            This formulation provides greater modeling flexibility while
-            maintaining tractable likelihood structures. The framework
-            includes hierarchical extensions and posterior inference via
-            Markov chain Monte Carlo, implemented in the R package
-            <i>alpmixBayes</i>.
+            To address these limitations, we develop Bayesian α-mixture survival models, 
+            which generalize classical mixture frameworks by introducing a parameter 
+            that controls the dependence and interaction between component hazards. 
+            This formulation allows for greater modeling flexibility while maintaining 
+            tractable likelihood structures. The methodology includes hierarchical 
+            extensions, posterior inference via Markov chain Monte Carlo, and 
+            computational implementation in R through the <i>alpmixBayes</i> package.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Publications -->
-    <section class="section">
-      <h2>Publications</h2>
-      <div class="card">
-        <ul class="list">
-          <li>
-            Yang, Z., Ryu, D., & Luan, F.
-            <i>mmcmcBayes: An R Package Implementing a Multistage MCMC Framework
-            for Detecting Differentially Methylated Regions.</i>
-            arXiv preprint.
-            <a href="https://arxiv.org/abs/2602.04554" target="_blank">[arXiv]</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+<!-- Publications -->
+<section class="section">
+  <h2>Publications</h2>
+  <div class="card">
+    <ul class="list">
+      <li>
+        Yang Z., Ryu D. and Luan, F. 
+        <i>mmcmcBayes: An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions.</i> 
+        arXiv preprint. 
+        <a href="https://arxiv.org/abs/2602.04554" target="_blank">[arXiv]</a>
+      </li>
+    </ul>
+  </div>
+</section>
 
     <div class="footer">
       © <span id="year"></span> Zhexuan Yang
@@ -146,6 +134,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
