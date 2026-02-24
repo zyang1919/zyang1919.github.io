@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Teaching | Zhexuan Yang</title>
+  <title>Teaching</title>
   <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
   <div class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">Zhexuan Yang</a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -21,41 +20,39 @@
   </div>
 
   <div class="container">
-    <section class="section">
-      <h2>Teaching</h2>
-      <div class="card">
-        <p>
-          I teach probability and stochastic modeling, emphasizing clear intuition, rigorous derivations, and
-          reproducible computation.
-        </p>
-      </div>
-    </section>
 
     <section class="section">
       <h2>Courses</h2>
       <div class="grid">
+
         <div class="card">
-          <h3>STAT/MATH 414 — Introduction to Probability</h3>
+          <h3>STAT 414 — Introduction to Probability Theory</h3>
           <p>Counting, conditional probability, random variables, limit theorems.</p>
+
           <ul class="list">
-            <li>Add syllabus link</li>
-            <li>Add lecture notes link</li>
+            <li><a href="assets/notes/stat414/Module1.pdf" target="_blank">Module 1</a></li>
+            <li><a href="assets/notes/stat414/Module2.pdf" target="_blank">Module 2</a></li>
+            <li><a href="assets/notes/stat414/Module3.pdf" target="_blank">Module 3</a></li>
+            <li><a href="assets/notes/stat414/Module4.pdf" target="_blank">Module 4</a></li>
+            <li><a href="assets/notes/stat414/Module5.pdf" target="_blank">Module 5</a></li>
+            <li><a href="assets/notes/stat414/Module6.pdf" target="_blank">Module 6</a></li>
+            <li><a href="assets/notes/stat414/Module7.pdf" target="_blank">Module 7</a></li>
           </ul>
         </div>
+
         <div class="card">
-          <h3>STAT/MATH 416 — Stochastic Modeling</h3>
-          <p>Markov chains, Poisson processes, CTMCs, branching processes.</p>
-          <ul class="list">
-            <li>Add syllabus link</li>
-            <li>Add problem sets link</li>
-          </ul>
+          <h3>STAT 416 — Stochastic Modeling</h3>
+          <p>Discrete (Continuous) Markov chains, Poisson processes, branching processes.</p>
         </div>
+
       </div>
     </section>
 
-    <div class="footer">© <span id="year"></span> Zhexuan Yang</div>
+    <div class="footer">© <span id="year"></span></div>
   </div>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
